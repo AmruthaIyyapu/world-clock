@@ -28,6 +28,9 @@ setInterval(updateDateTime, 1000);
 function updateCity(event) {
   let cityNameValue = event.target.value;
   // console.log(cityNameValue);
+  if (cityNameValue === "current") {
+    cityNameValue = moment.tz.guess();
+  }
   cityName = cityNameValue.replace("_", " ").split("/")[1];
   // console.log(cityName);
   let cityDate = moment().tz(cityNameValue).format("MMMM Do , YYYY");
