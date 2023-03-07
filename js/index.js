@@ -66,8 +66,3 @@ function updateCity(event) {
 
 let selectElement = document.querySelector("#city-select");
 selectElement.addEventListener("change", updateCity);
-
-function showDefault() {
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = ` `;
-}
