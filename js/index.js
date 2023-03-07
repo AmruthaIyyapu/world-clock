@@ -10,13 +10,24 @@ function updateDateTime() {
     );
   }
 
-  let londonElement = document.querySelector("#london");
-  if (londonElement) {
-    let londonDateElement = londonElement.querySelector(".date");
-    let londonTimeElement = londonElement.querySelector(".time");
-    let ldateElement = moment().tz("Europe/London");
-    londonDateElement.innerHTML = ldateElement.format("MMMM Do , YYYY");
-    londonTimeElement.innerHTML = ldateElement.format(
+  let sydneyElement = document.querySelector("#sydney");
+  if (sydneyElement) {
+    let sydneyDateElement = sydneyElement.querySelector(".date");
+    let sydneyTimeElement = sydneyElement.querySelector(".time");
+    let sdateElement = moment().tz("Australia/Sydney");
+    sydneyDateElement.innerHTML = sdateElement.format("MMMM Do , YYYY");
+    sydneyTimeElement.innerHTML = sdateElement.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  let budapestElement = document.querySelector("#budapest");
+  if (budapestElement) {
+    let budapestDateElement = budapestElement.querySelector(".date");
+    let budapestTimeElement = budapestElement.querySelector(".time");
+    let bdateElement = moment().tz("Europe/Budapest");
+    budapestDateElement.innerHTML = bdateElement.format("MMMM Do , YYYY");
+    budapestTimeElement.innerHTML = bdateElement.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
